@@ -16,13 +16,14 @@
   <% if user_signed_in? %>
     <ul>
       <li><%= link_to 'Dashboard', dashboard_path %></li>
+      <li><%= link_to "S'inscrire", parents_path %></li>
       <li><%= link_to 'Inscrire un enfant', new_enfant_path %></li>
       <li><%= link_to 'Modifier mon mot de passe', edit_user_registration_path %></li>
       <li><%= link_to 'Se déconnecter', destroy_user_session_path, :method => :delete %></li>
     </ul>
     <% else %>
       <ul>
-        <li><%= link_to "S'enregistrer", new_user_registration_path %></li>
+        <li><%= link_to "Créer un compte", new_user_registration_path %></li>
         <li><%= link_to 'Se connecter', new_user_session_path %></li>
       </ul>
     <% end %>
