@@ -12,4 +12,76 @@
  *
  *= require_tree .
  *= require_self
+ *= require ui_bibz
+ *= require bootstrap_and_overrides
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ html {
+ 	background-color: #F6F6F6;
+ 	background-image: url("http://s3.amazonaws.com/estock/fspid1/291500/building-saarland-germany-291558-h.jpg");
+ 	background-repeat: no-repeat;
+ 	background-size: 100%;
+ 	margin-top: 20px;
+ }
+
+
+ h1 {
+ 	text-align: center;
+ 	background: #FFFFFF;
+ 	color: #479CE1;
+ 	padding-bottom: 20px;
+ }
+
+ h2 {
+ 	text-align: center;
+ 	color: #479CE1;
+ 	background-color: #ffffff;
+ }
+
+ .nav {
+ 	color: #ffffff;
+ }
+
+ #bouton {
+ 	background-color: #F6F6F6;
+ 	color: #ffffff;
+ }
+
+ .field {
+ 	text-align: center;
+ 	font-size: 24px;
+ 	background-color: #F6F6F6;
+ 	padding: 20px;
+ 	width: 100%;
+ }
+
+ .actions{
+ 	text-align: center;
+ }
+
+ .link {
+ 	text-align: center;
+ }
+
+ .email {
+ 	font-size: 24px;
+ 	width: 100%;
+ 	margin-top: 25px;
+ 	margin-bottom: 25px;
+ }
+ #button {
+
+ }
+
+ form {
+ 	text-align: center;
+ }
+ .informations {
+ 	text-align: center;
+ 	font-size: 24px;
+ 	background-color: #F6F6F6;
+ 	padding: 20px;
+ 	width: 100%;
+ }

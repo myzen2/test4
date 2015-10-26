@@ -1,6 +1,11 @@
 class EnfantsController < ApplicationController
   before_action :set_enfant, only: [:show, :edit, :update, :destroy]
 
+  def age
+    now = Time.now.utc.to_date
+    now.year - date_de_naissance.year - (date_de_naissance.to_date.change(:year => now.year) > now ? 1 : 0)
+  end
+
   # GET /enfants
   # GET /enfants.json
   def index
@@ -14,7 +19,7 @@ class EnfantsController < ApplicationController
 
   # GET /enfants/new
   def new
-    @enfant = current_user.enfants.build
+    @enfant = current_user.enfants.build(date_de_naissance: Time.zone.parse("01-01-2000").to_date)
   end
 
   # GET /enfants/1/edit

@@ -2,35 +2,29 @@
 <html>
 <head>
   <title>Test4</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% flash.each do |name, msg| %>
-    <%= content_tag(:div, msg, class: 'alert alert-#{name}') %>
-  <% end %>
 
-  <% if user_signed_in? %>
-    <ul>
-      <li><%= link_to 'Dashboard', dashboard_path %></li>
-      <li><%= link_to "S'inscrire", parents_path %></li>
-      <li><%= link_to 'Inscrire un enfant', new_enfant_path %></li>
-      <li><%= link_to 'Modifier mon mot de passe', edit_user_registration_path %></li>
-      <li><%= link_to 'Se déconnecter', destroy_user_session_path, :method => :delete %></li>
-    </ul>
-    <% else %>
-      <ul>
-        <li><%= link_to "Créer un compte", new_user_registration_path %></li>
-        <li><%= link_to 'Se connecter', new_user_session_path %></li>
-      </ul>
-    <% end %>
-    <hr>
+
+
+<%= render "layouts/navbar" %>
+
+
 
 
 <%= yield %>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
 </body>
 </html>
