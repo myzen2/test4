@@ -10,31 +10,28 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_tree .
  *= require_self
  *= require ui_bibz
  *= require bootstrap_and_overrides
  */
- /*!
- */
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  html {
- 	background-color: #F8F8F8;
+ 	background-color: #FFF;
  	background-image: url("school-bus-489365.png");
  	background-repeat: no-repeat, center;
- 	background-size: 100%;
- 	margin-top: 0px;
+ 	background-size: 90%;
+ 	margin-top: 30px;
  }
 
-body {
-  margin-top: -10px;
-}
 
  h1 {
  	text-align: center;
- 	background: #F8F8F8;
+ 	background: #FFFFFF;
  	color: #479CE1;
+ 	padding-bottom: 20px;
  }
 
  h2 {
@@ -43,13 +40,7 @@ body {
  	background-color: #ffffff;
  }
 
-#notice {
-  background-color: #4CAB4C;
-  font-size: 30px;
-  text-align: center;
-  color: #fff;
-}
- .navbar-header {
+ .nav {
  	color: #000;
   margin-top: -10%, auto;
  }
@@ -80,6 +71,9 @@ body {
  	width: 100%;
  	margin-top: 25px;
  	margin-bottom: 25px;
+ }
+ #button {
+
  }
 
  form {

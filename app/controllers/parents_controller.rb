@@ -1,10 +1,10 @@
 class ParentsController < ApplicationController
   before_action :set_parent, only: [:show, :edit, :update, :destroy]
 
-  def age
-    now = Time.now.utc.to_date
-    now.year - date_de_naissance.year - (date_de_naissance.to_date.change(:year => now.year) > now ? 1 : 0)
-  end 
+#  def age
+#    now = Time.now.utc.to_date
+#    now.year - date_de_naissance.year - (date_de_naissance.to_date.change(:year => now.year) > now ? 1 : 0)
+#  end
 
   # GET /parents
   # GET /parents.json
@@ -75,6 +75,6 @@ class ParentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parent_params
-      params.require(:parent).permit(:nom, :prenom, :adresse, :date_de_naissance)
+      params.require(:parent).permit(:nom, :prenom, :adresse, :telephone, :date_de_naissance)
     end
 end
