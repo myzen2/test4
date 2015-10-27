@@ -30,7 +30,7 @@ gem "ui_bibz", '~> 1.2.3'
 gem 'execjs'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'geocoder', '~> 1.2', '>= 1.2.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
