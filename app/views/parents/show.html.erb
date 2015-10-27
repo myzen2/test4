@@ -29,5 +29,9 @@
   </table>
 
 
+
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=900x600&sensor=false&zoom=16&markers=#{@parent.latitude}%2C#{@parent.longitude}" %>
+
+
 <%= link_to 'Edit', edit_parent_path(@parent) %> |
 <%= link_to 'Back', parents_path %>
