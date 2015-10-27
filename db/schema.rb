@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026174537) do
+ActiveRecord::Schema.define(version: 20151027070643) do
 
   create_table "enfants", force: :cascade do |t|
     t.string   "nom"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20151026174537) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "user_id"
+    t.string   "telephone"
   end
 
   add_index "parents", ["user_id"], name: "index_parents_on_user_id"

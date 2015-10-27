@@ -22,10 +22,10 @@
           <td><%= parent.date_de_naissance %></td>
           <td><%= parent.age %> ans</td>
           <td><%= parent.adresse %></td>
-          <td><!--%= parent.telephone %--></td>
-          <td><%= link_to 'Montrer', parent %></td>
-          <td><%= link_to 'Modifier', edit_parent_path(parent) %></td>
-          <td><%= link_to 'Supprimer', parent, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></td>
+          <td><%= parent.telephone %></td>
+          <td><%= link_to "Montrer", parent %></td>
+          <td><%= link_to "Modifier", edit_parent_path(parent) %></td>
+          <td><%= link_to "Supprimer", parent, method: :delete, data: { confirm: 'Etes-vous sûr ?' } %></td>
           </tr>
         <% end %>
     </tbody>
