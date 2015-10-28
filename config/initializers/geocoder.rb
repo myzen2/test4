@@ -1,7 +1,7 @@
-Geocoder.configure(
+#Geocoder.configure(
   # geocoding options
   # :timeout      => 3,           # geocoding service timeout (secs)
-  :lookup       => :dstk, host: "localhost:4567"     # name of geocoding service (symbol)
+  #:lookup       => :dstk, host: "localhost:4567"     # name of geocoding service (symbol)
   # :language     => :fr,
   #:use_https    => true,       # use HTTPS for lookup requests? (if supported)
   # :http_proxy   => nil,         # HTTP proxy server (user:pass@host:port)
@@ -19,4 +19,13 @@ Geocoder.configure(
   #:units     => :km,
   # :km for kilometers or :mi for miles
   # :distances => :linear    # :spherical or :linear
-)
+#)
+Geocoder.configure do |config|
+#  config.lookup = :dstk
+#  config.host = "localhost:4567"
+  config.lookup = :google
+  config.api_key = ENV[Google_API_KEY] 
+  config.language = :fr
+  config.timeout = 5
+  config.units = :km
+end

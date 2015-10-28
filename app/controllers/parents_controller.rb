@@ -20,7 +20,6 @@ class ParentsController < ApplicationController
   # GET /parents/new @enfant = current_user.enfants.build
   def new
     @parent = current_user.parents.build(date_de_naissance: Time.zone.parse("01-01-1960").to_date)
-
   end
 
   # GET /parents/1/edit

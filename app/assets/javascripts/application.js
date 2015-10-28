@@ -12,9 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require gmaps-auto-complete
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require bootstrap/scrollspy
 //= require bootstrap/modal
 //= require bootstrap/dropdown
-//= require_tree
+//= require gmaps/google
